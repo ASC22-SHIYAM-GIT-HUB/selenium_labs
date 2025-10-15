@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  
 import java.time.Duration;
  
-public class fun {
+public class Lab5 {
  
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
@@ -73,15 +73,16 @@ public class fun {
  
             // Wait for success message
             WebElement successMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//*[contains(text(),'Your Account Has Been Created!')]")));
+                    By.xpath("//*[@id=\"content\"]/h1")));
  
             if (successMsg.isDisplayed()) {
-                System.out.println(" Account creation successful.");
+                System.out.println(" Verified Account creation successful.");
             }
  
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+        	driver.findElement(By.partialLinkText("Continue"));
             driver.quit();
         }
     }

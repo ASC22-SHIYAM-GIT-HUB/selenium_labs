@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Browser opened and navigated to the TutorialsNinja URL.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on the 'Desktops' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on 'Mac' from the dropdown.]]>
+    </line>
+    <line>
+      <![CDATA[Selected 'Name (A - Z)' from the Sort By dropdown.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked 'Add to Cart' for the iMac.]]>
+    </line>
+    <line>
+      <![CDATA[Verified that the product was successfully added to the cart.]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed.]]>
+    </line>
+    <line>
+      <![CDATA[Browser opened and navigated to the TutorialsNinja URL.]]>
+    </line>
+    <line>
+      <![CDATA[Verified the page title is 'Your Store'.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on the 'Desktops' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on 'Mac' from the dropdown.]]>
+    </line>
+    <line>
+      <![CDATA[Verified the page heading is 'Mac'.]]>
+    </line>
+    <line>
+      <![CDATA[Selected 'Name (A - Z)' from the Sort By dropdown.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked 'Add to Cart' and verified the success message.]]>
+    </line>
+    <line>
+      <![CDATA[Searched for 'Mobile'.]]>
+    </line>
+    <line>
+      <![CDATA[Cleared the search criteria text box.]]>
+    </line>
+    <line>
+      <![CDATA[Entered 'Monitors' into the search criteria text box.]]>
+    </line>
+    <line>
+      <![CDATA[Checked the 'Search in product descriptions' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Clicked the search button to perform a new search.]]>
+    </line>
+    <line>
+      <![CDATA[Verified that the search results page for 'Monitors' is displayed correctly.]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-10-15T14:30:41 IST" name="Suite" finished-at="2025-10-15T14:31:05 IST" duration-ms="24574">
+    <groups>
+    </groups>
+    <test started-at="2025-10-15T14:30:41 IST" name="Test" finished-at="2025-10-15T14:31:05 IST" duration-ms="24574">
+      <class name="pack1.Lab8">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pack1.Lab8@351d00c0]" started-at="2025-10-15T14:30:41 IST" name="setUp" finished-at="2025-10-15T14:30:56 IST" duration-ms="14809" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser opened and navigated to the TutorialsNinja URL.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="lab3BasicFlowTest()[pri:1, instance:pack1.Lab8@351d00c0]" started-at="2025-10-15T14:30:56 IST" name="lab3BasicFlowTest" description="Automates the basic flow from Lab 3" finished-at="2025-10-15T14:30:57 IST" duration-ms="1413" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked on the 'Desktops' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on 'Mac' from the dropdown.]]>
+            </line>
+            <line>
+              <![CDATA[Selected 'Name (A - Z)' from the Sort By dropdown.]]>
+            </line>
+            <line>
+              <![CDATA[Clicked 'Add to Cart' for the iMac.]]>
+            </line>
+            <line>
+              <![CDATA[Verified that the product was successfully added to the cart.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- lab3BasicFlowTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pack1.Lab8@351d00c0]" started-at="2025-10-15T14:30:57 IST" name="tearDown" finished-at="2025-10-15T14:30:58 IST" duration-ms="1080" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser closed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:pack1.Lab8@351d00c0]" started-at="2025-10-15T14:30:58 IST" name="setUp" finished-at="2025-10-15T14:31:02 IST" duration-ms="3924" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser opened and navigated to the TutorialsNinja URL.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="lab4ValidationTest()[pri:2, instance:pack1.Lab8@351d00c0]" started-at="2025-10-15T14:31:02 IST" name="lab4ValidationTest" description="Automates the validation flow from Lab 4" finished-at="2025-10-15T14:31:04 IST" duration-ms="2137" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Verified the page title is 'Your Store'.]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on the 'Desktops' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on 'Mac' from the dropdown.]]>
+            </line>
+            <line>
+              <![CDATA[Verified the page heading is 'Mac'.]]>
+            </line>
+            <line>
+              <![CDATA[Selected 'Name (A - Z)' from the Sort By dropdown.]]>
+            </line>
+            <line>
+              <![CDATA[Clicked 'Add to Cart' and verified the success message.]]>
+            </line>
+            <line>
+              <![CDATA[Searched for 'Mobile'.]]>
+            </line>
+            <line>
+              <![CDATA[Cleared the search criteria text box.]]>
+            </line>
+            <line>
+              <![CDATA[Entered 'Monitors' into the search criteria text box.]]>
+            </line>
+            <line>
+              <![CDATA[Checked the 'Search in product descriptions' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Clicked the search button to perform a new search.]]>
+            </line>
+            <line>
+              <![CDATA[Verified that the search results page for 'Monitors' is displayed correctly.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- lab4ValidationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pack1.Lab8@351d00c0]" started-at="2025-10-15T14:31:04 IST" name="tearDown" finished-at="2025-10-15T14:31:05 IST" duration-ms="1157" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser closed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pack1.Lab8 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

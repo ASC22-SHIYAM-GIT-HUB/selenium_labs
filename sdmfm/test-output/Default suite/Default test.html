@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 15 14:28:46 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>25 seconds (25589 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pack1.Lab8.lab4ValidationTest()'><b>lab4ValidationTest</b><br>Test class: pack1.Lab8<br>Test method: Automates the validation flow from Lab 4<br/>
+<a href="#Output-1618326227" onClick='toggleBox("Output-1618326227", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1618326227" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1618326227">
+Verified the page title is 'Your Store'.<br/>
+Clicked on the 'Desktops' tab.<br/>
+Clicked on 'Mac' from the dropdown.<br/>
+Verified the page heading is 'Mac'.<br/>
+Selected 'Name (A - Z)' from the Sort By dropdown.<br/>
+Clicked 'Add to Cart' and verified the success message.<br/>
+Searched for 'Mobile'.<br/>
+Cleared the search criteria text box.<br/>
+Entered 'Monitors' into the search criteria text box.<br/>
+Checked the 'Search in product descriptions' checkbox.<br/>
+Clicked the search button to perform a new search.<br/>
+Verified that the search results page for 'Monitors' is displayed correctly.<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>pack1.Lab8@351d00c0</td></tr>
+<tr>
+<td title='pack1.Lab8.lab3BasicFlowTest()'><b>lab3BasicFlowTest</b><br>Test class: pack1.Lab8<br>Test method: Automates the basic flow from Lab 3<br/>
+<a href="#Output-1756160273" onClick='toggleBox("Output-1756160273", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1756160273" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1756160273">
+Clicked on the 'Desktops' tab.<br/>
+Clicked on 'Mac' from the dropdown.<br/>
+Selected 'Name (A - Z)' from the Sort By dropdown.<br/>
+Clicked 'Add to Cart' for the iMac.<br/>
+Verified that the product was successfully added to the cart.<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>pack1.Lab8@351d00c0</td></tr>
+</table><p>
+</body>
+</html>
