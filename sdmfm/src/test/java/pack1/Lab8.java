@@ -83,7 +83,7 @@ public class Lab8 {
         Assert.assertTrue(newSearchHeading.isDisplayed(), "Search results for 'Monitors' were not displayed.");
         Reporter.log("Verified that the search results page for 'Monitors' is displayed correctly.");
     }
-    @AfterMethod
+    @AfterMethod    
     public void tearDown() {
         if (driver != null) {
             driver.quit();
