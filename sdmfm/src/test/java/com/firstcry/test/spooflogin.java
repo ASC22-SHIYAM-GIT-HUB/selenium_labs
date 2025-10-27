@@ -11,7 +11,7 @@ import com.firstcry.base.BaseTesting;
 
 import java.time.Duration;
 
-public class LoginTest extends BaseTesting {
+public class spooflogin extends BaseTesting {
 
     @Test
     public void testLoginWithMobileNumberAndOTP() throws InterruptedException {
