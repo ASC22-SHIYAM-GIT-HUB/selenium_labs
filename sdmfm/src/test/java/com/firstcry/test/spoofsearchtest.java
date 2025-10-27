@@ -30,7 +30,7 @@ public class spoofsearchtest extends BaseTesting {
         logStep("Starting test: searchAndNavigateToProduct");
 
         // Navigate to FirstCry homepage
-        //navigateurl("https://www.firstcry.com/");
+        navigateurl("https://www.firstcry.com/");
         logStep("Navigated to FirstCry homepage");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -90,4 +90,5 @@ public class spoofsearchtest extends BaseTesting {
         }
     }
 }
+
 
