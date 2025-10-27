@@ -3,19 +3,33 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="pack1.NewTest">
+      <class name="com.firstcry.test.spoofa2d">
         <methods>
-          <include name="f" invocation-numbers="1"/>
-          <include name="afterSuite"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
-          <include name="beforeSuite"/>
-          <include name="afterMethod"/>
-          <include name="beforeTest"/>
+          <include name="testAddingProductToWishlistAndShortlist"/>
+          <include name="tearDownSuite"/>
+          <include name="tearDownMethod"/>
+          <include name="setupTest"/>
+          <include name="setupSuite"/>
         </methods>
-      </class> <!-- pack1.NewTest -->
+      </class> <!-- com.firstcry.test.spoofa2d -->
+      <class name="com.firstcry.test.spoofwislist">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="tearDownMethod"/>
+          <include name="testAddingProductToWishlistAndShortlist"/>
+          <include name="setupTest"/>
+          <include name="setupSuite"/>
+        </methods>
+      </class> <!-- com.firstcry.test.spoofwislist -->
+      <class name="com.firstcry.test.WishlistToCart">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="tearDownMethod"/>
+          <include name="removeFromCart"/>
+          <include name="setupTest"/>
+          <include name="setupSuite"/>
+        </methods>
+      </class> <!-- com.firstcry.test.WishlistToCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

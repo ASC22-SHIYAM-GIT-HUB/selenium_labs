@@ -3,20 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pack1.Lab11">
+      <class name="com.firstcry.test.spoofsearchtest">
         <methods>
-          <include name="beforeClass"/>
-          <include name="loginTestUsingPageFactory" invocation-numbers="1"/>
-          <include name="loginTestUsingPOM" invocation-numbers="1"/>
-          <include name="teardown"/>
-          <include name="afterClass"/>
-          <include name="beforeSuite"/>
-          <include name="afterTest"/>
-          <include name="setup"/>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
+          <include name="tearDownSuite"/>
+          <include name="testAddingProductToWishlistAndShortlist"/>
+          <include name="tearDownMethod"/>
+          <include name="setupTest"/>
+          <include name="setupSuite"/>
         </methods>
-      </class> <!-- pack1.Lab11 -->
+      </class> <!-- com.firstcry.test.spoofsearchtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
