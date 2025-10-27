@@ -5,19 +5,21 @@
     <classes>
       <class name="com.firstcry.test.spoofa2d">
         <methods>
-          <include name="testAddingProductToWishlistAndShortlist"/>
           <include name="tearDownSuite"/>
           <include name="tearDownMethod"/>
+          <include name="testAddingProductToAddtocart"/>
           <include name="setupTest"/>
           <include name="setupSuite"/>
+          <include name="flushReport"/>
         </methods>
       </class> <!-- com.firstcry.test.spoofa2d -->
       <class name="com.firstcry.test.spoofwislist">
         <methods>
           <include name="tearDownSuite"/>
           <include name="tearDownMethod"/>
-          <include name="testAddingProductToWishlistAndShortlist"/>
+          <include name="testAddingProductToWishlist"/>
           <include name="setupTest"/>
+          <include name="flushReport"/>
           <include name="setupSuite"/>
         </methods>
       </class> <!-- com.firstcry.test.spoofwislist -->

@@ -9,58 +9,84 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.firstcry.base.BaseTesting;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.firstcry.utilities.ExtentManager;
 
 public class spoofsearchtest extends BaseTesting {
 
-    @Test
-    public void testAddingProductToWishlistAndShortlist() throws InterruptedException {
-        System.out.println("Starting test: testAddingProductToWishlistAndShortlist");
+    ExtentReports extent = ExtentManager.getinstance(); // singleton ExtentReports
+    ExtentTest test; // one test per method
 
-        navigateurl("https://www.firstcry.com/");
-        System.out.println("Navigated to FirstCry homepage");
+    @Test
+    public void searchbutton() throws InterruptedException {
+        // Create ExtentTest for this test method
+        test = extent.createTest("testAddingProductToWishlistAndShortlist");
+
+        logStep("Starting test: testAddingProductToWishlistAndShortlist");
+
+        //navigateurl("https://www.firstcry.com/");
+        logStep("Navigated to FirstCry homepage");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Actions actions = new Actions(driver);
 
         // Step 1: Search for the product
-        System.out.println("Locating search box...");
+        logStep("Locating search box...");
         WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(By.id("search_box")));
-        System.out.println("Entering product name in search box...");
+        logStep("Entering product name in search box...");
         searchBox.sendKeys("Babyhug Cosy Cosmo Stroller");
-        System.out.println("Clicking search button...");
+        logStep("Clicking search button...");
         driver.findElement(By.cssSelector(".search-button")).click();
 
         // Step 2: Click on the product link
-        System.out.println("Waiting for product link to be clickable...");
+        logStep("Waiting for product link to be clickable...");
         WebElement product = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//a[contains(@title,'Babyhug Cosy Cosmo Stroller')]")
         ));
-        System.out.println("Scrolling to product link...");
+        logStep("Scrolling to product link...");
         js.executeScript("arguments[0].scrollIntoView(true);", product);
-        System.out.println("Clicking on product link...");
+        logStep("Clicking on product link...");
         product.click();
 
         // Step 2a: Switch to new tab if opened
         String originalTab = driver.getWindowHandle();
-        System.out.println("Original tab handle: " + originalTab);
+        logStep("Original tab handle: " + originalTab);
         Set<String> allTabs = driver.getWindowHandles();
         for (String tab : allTabs) {
             if (!tab.equals(originalTab)) {
                 driver.switchTo().window(tab);
-                System.out.println("Switched to new tab: " + tab);
+                logStep("Switched to new tab: " + tab);
                 break;
             }
         }
 
         // Step 3: Wait for the product page to load
-        System.out.println("Waiting for product page to load...");
+        logStep("Waiting for product page to load...");
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("prodImgInfo")));
-        System.out.println("✅ Navigated to product page: " + driver.getCurrentUrl());
+        logStep("✅ Navigated to product page: " + driver.getCurrentUrl());
 
-        System.out.println("Test completed: testAddingProductToWishlistAndShortlist");
+        logStep("Test completed: testAddingProductToWishlistAndShortlist");
+    }
+
+    // Helper method to log steps both in console and ExtentReports
+    private void logStep(String message) {
+        System.out.println("[TESTINFO] " + message);
+        if (test != null) {
+            test.pass(message); // logs the step in report
+        }
+    }
+
+    // Flush ExtentReports after each test
+    @AfterMethod
+    public void flushReport() {
+        if (extent != null) {
+            extent.flush();
+        }
     }
 }
