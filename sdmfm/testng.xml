@@ -3,12 +3,17 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+<<<<<<< HEAD
       <class name="com.firstcry.test.spooflogin"/>
       <!-- <class name="com.firstcry.test.LoginTest"/>>-->
       <class name="com.firstcry.test.spoofsearchtest"/>
       <class name="com.firstcry.test.spoofwislist"/>
       <class name="com.firstcry.test.spoofa2d"/>
       <class name="com.firstcry.test.WishlistToCart"></class>
+=======
+      <class name="pack1.Build"/>
+>>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
