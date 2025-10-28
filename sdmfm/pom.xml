@@ -82,10 +82,17 @@
             </configuration>
         </plugin>
     </plugins>
+<<<<<<< HEAD
 
 </build>
 
+=======
+</build>
+>>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
 </project>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git

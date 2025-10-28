@@ -19,16 +19,28 @@ import com.firstcry.utilities.ExtentManager;
 
 public class spoofsearchtest extends BaseTesting {
 
-    ExtentReports extent = ExtentManager.getinstance(); // singleton ExtentReports
-    ExtentTest test; // one test per method
+    ExtentReports extent = ExtentManager.getinstance(); // Singleton ExtentReports
+    ExtentTest test; // One test per method
 
     @Test
-    public void searchbutton() throws InterruptedException {
+    public void searchAndNavigateToProduct() {
         // Create ExtentTest for this test method
+<<<<<<< HEAD
         test = extent.createTest("Search Bar Button");
+=======
+        test = extent.createTest("searchAndNavigateToProduct");
+>>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
 
+<<<<<<< HEAD
         logStep("Starting test: Search Bar Button");
+=======
+        logStep("Starting test: searchAndNavigateToProduct");
+>>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
 
+<<<<<<< HEAD
+=======
+        // Navigate to FirstCry homepage
+>>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
         navigateurl("https://www.firstcry.com/");
         logStep("Navigated to FirstCry homepage");
 
@@ -39,10 +51,10 @@ public class spoofsearchtest extends BaseTesting {
         // Step 1: Search for the product
         logStep("Locating search box...");
         WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(By.id("search_box")));
-        logStep("Entering product name in search box...");
         searchBox.sendKeys("Babyhug Cosy Cosmo Stroller");
-        logStep("Clicking search button...");
-        driver.findElement(By.cssSelector(".search-button")).click();
+        logStep("Entering product name and clicking search button...");
+        WebElement searchBtn = driver.findElement(By.cssSelector(".search-button"));
+        js.executeScript("arguments[0].click();", searchBtn);
 
         // Step 2: Click on the product link
         logStep("Waiting for product link to be clickable...");
@@ -52,11 +64,10 @@ public class spoofsearchtest extends BaseTesting {
         logStep("Scrolling to product link...");
         js.executeScript("arguments[0].scrollIntoView(true);", product);
         logStep("Clicking on product link...");
-        product.click();
+        js.executeScript("arguments[0].click();", product);
 
-        // Step 2a: Switch to new tab if opened
+        // Step 3: Handle new tab if opened
         String originalTab = driver.getWindowHandle();
-        logStep("Original tab handle: " + originalTab);
         Set<String> allTabs = driver.getWindowHandles();
         for (String tab : allTabs) {
             if (!tab.equals(originalTab)) {
@@ -66,19 +77,19 @@ public class spoofsearchtest extends BaseTesting {
             }
         }
 
-        // Step 3: Wait for the product page to load
+        // Step 4: Wait for the product page to load
         logStep("Waiting for product page to load...");
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("prodImgInfo")));
         logStep("✅ Navigated to product page: " + driver.getCurrentUrl());
 
-        logStep("Test completed: testAddingProductToWishlistAndShortlist");
+        logStep("Test completed: searchAndNavigateToProduct");
     }
 
     // Helper method to log steps both in console and ExtentReports
     private void logStep(String message) {
         System.out.println("[TESTINFO] " + message);
         if (test != null) {
-            test.pass(message); // logs the step in report
+            test.pass(message);
         }
     }
 
@@ -90,3 +101,5 @@ public class spoofsearchtest extends BaseTesting {
         }
     }
 }
+
+
