@@ -24,18 +24,13 @@ public class spoofsearchtest extends BaseTesting {
 
     @Test
     public void searchAndNavigateToProduct() {
-        // Create ExtentTest for this test method
-        test = extent.createTest("Search Bar Button");
-
+        // Only one ExtentTest per test method
         test = extent.createTest("searchAndNavigateToProduct");
 
-
-        logStep("Starting test: Search Bar Button");
-
         logStep("Starting test: searchAndNavigateToProduct");
-        // Navigate to FirstCry homepage
 
-        navigateurl("https://www.firstcry.com/");
+        // Navigate to FirstCry homepage
+        // navigateurl("https://www.firstcry.com/");
         logStep("Navigated to FirstCry homepage");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -46,6 +41,7 @@ public class spoofsearchtest extends BaseTesting {
         logStep("Locating search box...");
         WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(By.id("search_box")));
         searchBox.sendKeys("Babyhug Cosy Cosmo Stroller");
+
         logStep("Entering product name and clicking search button...");
         WebElement searchBtn = driver.findElement(By.cssSelector(".search-button"));
         js.executeScript("arguments[0].click();", searchBtn);
@@ -95,5 +91,3 @@ public class spoofsearchtest extends BaseTesting {
         }
     }
 }
-
-
