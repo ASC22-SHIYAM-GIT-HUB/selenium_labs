@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-28T00:08:00 IST" name="Suite" finished-at="2025-10-28T00:09:26 IST" duration-ms="85656">
+  <suite started-at="2025-10-28T17:59:15 IST" name="Suite" finished-at="2025-10-28T18:01:07 IST" duration-ms="111862">
     <groups>
     </groups>
-    <test started-at="2025-10-28T00:08:00 IST" name="Test" finished-at="2025-10-28T00:09:26 IST" duration-ms="85656">
+    <test started-at="2025-10-28T17:59:15 IST" name="Test" finished-at="2025-10-28T18:01:07 IST" duration-ms="111862">
       <class name="com.firstcry.test.spooflogin">
-        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.firstcry.test.spooflogin@7770f470]" started-at="2025-10-28T00:07:58 IST" name="setupSuite" finished-at="2025-10-28T00:08:00 IST" duration-ms="1679" status="PASS">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.firstcry.test.spooflogin@6c40365c]" started-at="2025-10-28T17:59:13 IST" name="setupSuite" finished-at="2025-10-28T17:59:15 IST" duration-ms="2469" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spooflogin@7770f470]" started-at="2025-10-28T00:08:00 IST" name="setupTest" finished-at="2025-10-28T00:08:00 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spooflogin@6c40365c]" started-at="2025-10-28T17:59:15 IST" name="setupTest" finished-at="2025-10-28T17:59:15 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,28 +22,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="testLoginWithMobileNumberAndOTP()[pri:0, instance:com.firstcry.test.spooflogin@7770f470]" started-at="2025-10-28T00:08:00 IST" name="testLoginWithMobileNumberAndOTP" finished-at="2025-10-28T00:08:38 IST" duration-ms="38013" status="PASS">
+        <test-method signature="testLoginWithMobileNumberAndOTP()[pri:0, instance:com.firstcry.test.spooflogin@6c40365c]" started-at="2025-10-28T17:59:15 IST" name="testLoginWithMobileNumberAndOTP" finished-at="2025-10-28T17:59:54 IST" duration-ms="38648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginWithMobileNumberAndOTP -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spooflogin@7770f470]" started-at="2025-10-28T00:08:38 IST" name="tearDownMethod" finished-at="2025-10-28T00:08:38 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spooflogin@6c40365c]" started-at="2025-10-28T17:59:54 IST" name="tearDownMethod" finished-at="2025-10-28T17:59:54 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLoginWithMobileNumberAndOTP status=SUCCESS method=spooflogin.testLoginWithMobileNumberAndOTP()[pri:0, instance:com.firstcry.test.spooflogin@7770f470] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginWithMobileNumberAndOTP status=SUCCESS method=spooflogin.testLoginWithMobileNumberAndOTP()[pri:0, instance:com.firstcry.test.spooflogin@6c40365c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:com.firstcry.test.spooflogin@7770f470]" started-at="2025-10-28T00:09:26 IST" name="tearDownSuite" finished-at="2025-10-28T00:09:26 IST" duration-ms="31" status="PASS">
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:com.firstcry.test.spooflogin@6c40365c]" started-at="2025-10-28T18:01:07 IST" name="tearDownSuite" finished-at="2025-10-28T18:01:10 IST" duration-ms="3004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSuite -->
       </class> <!-- com.firstcry.test.spooflogin -->
       <class name="com.firstcry.test.spoofa2d">
-        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spoofa2d@a1f72f5]" started-at="2025-10-28T00:09:01 IST" name="setupTest" finished-at="2025-10-28T00:09:01 IST" duration-ms="0" status="PASS">
+        <test-method signature="testAddingProductToAddtocart()[pri:0, instance:com.firstcry.test.spoofa2d@6531a794]" started-at="2025-10-28T18:00:29 IST" name="testAddingProductToAddtocart" finished-at="2025-10-28T18:00:40 IST" duration-ms="10788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddingProductToAddtocart -->
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spoofa2d@6531a794]" started-at="2025-10-28T18:00:29 IST" name="setupTest" finished-at="2025-10-28T18:00:29 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,19 +58,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="testAddingProductToAddtocart()[pri:0, instance:com.firstcry.test.spoofa2d@a1f72f5]" started-at="2025-10-28T00:09:01 IST" name="testAddingProductToAddtocart" finished-at="2025-10-28T00:09:10 IST" duration-ms="9329" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddingProductToAddtocart -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.firstcry.test.spoofa2d@a1f72f5]" started-at="2025-10-28T00:09:10 IST" name="flushReport" finished-at="2025-10-28T00:09:10 IST" duration-ms="57" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.firstcry.test.spoofa2d@6531a794]" started-at="2025-10-28T18:00:40 IST" name="flushReport" finished-at="2025-10-28T18:00:40 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spoofa2d@a1f72f5]" started-at="2025-10-28T00:09:10 IST" name="tearDownMethod" finished-at="2025-10-28T00:09:10 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spoofa2d@6531a794]" started-at="2025-10-28T18:00:40 IST" name="tearDownMethod" finished-at="2025-10-28T18:00:40 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddingProductToAddtocart status=SUCCESS method=spoofa2d.testAddingProductToAddtocart()[pri:0, instance:com.firstcry.test.spoofa2d@a1f72f5] output={null}]]]>
+                <![CDATA[[TestResult name=testAddingProductToAddtocart status=SUCCESS method=spoofa2d.testAddingProductToAddtocart()[pri:0, instance:com.firstcry.test.spoofa2d@6531a794] output={null}]]]>
               </value>
             </param>
           </params>
@@ -75,7 +75,7 @@
         </test-method> <!-- tearDownMethod -->
       </class> <!-- com.firstcry.test.spoofa2d -->
       <class name="com.firstcry.test.spoofwislist">
-        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spoofwislist@19976a65]" started-at="2025-10-28T00:08:50 IST" name="setupTest" finished-at="2025-10-28T00:08:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spoofwislist@2dc9b0f5]" started-at="2025-10-28T18:00:18 IST" name="setupTest" finished-at="2025-10-28T18:00:18 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,19 +86,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="testAddingProductToWishlist()[pri:0, instance:com.firstcry.test.spoofwislist@19976a65]" started-at="2025-10-28T00:08:50 IST" name="testAddingProductToWishlist" finished-at="2025-10-28T00:09:01 IST" duration-ms="11045" status="PASS">
+        <test-method signature="testAddingProductToWishlist()[pri:0, instance:com.firstcry.test.spoofwislist@2dc9b0f5]" started-at="2025-10-28T18:00:18 IST" name="testAddingProductToWishlist" finished-at="2025-10-28T18:00:29 IST" duration-ms="10946" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddingProductToWishlist -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.firstcry.test.spoofwislist@19976a65]" started-at="2025-10-28T00:09:01 IST" name="flushReport" finished-at="2025-10-28T00:09:01 IST" duration-ms="60" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.firstcry.test.spoofwislist@2dc9b0f5]" started-at="2025-10-28T18:00:29 IST" name="flushReport" finished-at="2025-10-28T18:00:29 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spoofwislist@19976a65]" started-at="2025-10-28T00:09:01 IST" name="tearDownMethod" finished-at="2025-10-28T00:09:01 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spoofwislist@2dc9b0f5]" started-at="2025-10-28T18:00:29 IST" name="tearDownMethod" finished-at="2025-10-28T18:00:29 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddingProductToWishlist status=SUCCESS method=spoofwislist.testAddingProductToWishlist()[pri:0, instance:com.firstcry.test.spoofwislist@19976a65] output={null}]]]>
+                <![CDATA[[TestResult name=testAddingProductToWishlist status=SUCCESS method=spoofwislist.testAddingProductToWishlist()[pri:0, instance:com.firstcry.test.spoofwislist@2dc9b0f5] output={null}]]]>
               </value>
             </param>
           </params>
@@ -107,7 +107,11 @@
         </test-method> <!-- tearDownMethod -->
       </class> <!-- com.firstcry.test.spoofwislist -->
       <class name="com.firstcry.test.spoofsearchtest">
-        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spoofsearchtest@1ebea008]" started-at="2025-10-28T00:08:38 IST" name="setupTest" finished-at="2025-10-28T00:08:38 IST" duration-ms="1" status="PASS">
+        <test-method signature="searchbutton()[pri:0, instance:com.firstcry.test.spoofsearchtest@7905a0b8]" started-at="2025-10-28T17:59:54 IST" name="searchbutton" finished-at="2025-10-28T18:00:18 IST" duration-ms="23868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchbutton -->
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.spoofsearchtest@7905a0b8]" started-at="2025-10-28T17:59:54 IST" name="setupTest" finished-at="2025-10-28T17:59:54 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -118,19 +122,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="searchbutton()[pri:0, instance:com.firstcry.test.spoofsearchtest@1ebea008]" started-at="2025-10-28T00:08:38 IST" name="searchbutton" finished-at="2025-10-28T00:08:49 IST" duration-ms="11093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchbutton -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.firstcry.test.spoofsearchtest@1ebea008]" started-at="2025-10-28T00:08:49 IST" name="flushReport" finished-at="2025-10-28T00:08:50 IST" duration-ms="435" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:com.firstcry.test.spoofsearchtest@7905a0b8]" started-at="2025-10-28T18:00:18 IST" name="flushReport" finished-at="2025-10-28T18:00:18 IST" duration-ms="433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spoofsearchtest@1ebea008]" started-at="2025-10-28T00:08:50 IST" name="tearDownMethod" finished-at="2025-10-28T00:08:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.spoofsearchtest@7905a0b8]" started-at="2025-10-28T18:00:18 IST" name="tearDownMethod" finished-at="2025-10-28T18:00:18 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=searchbutton status=SUCCESS method=spoofsearchtest.searchbutton()[pri:0, instance:com.firstcry.test.spoofsearchtest@1ebea008] output={null}]]]>
+                <![CDATA[[TestResult name=searchbutton status=SUCCESS method=spoofsearchtest.searchbutton()[pri:0, instance:com.firstcry.test.spoofsearchtest@7905a0b8] output={null}]]]>
               </value>
             </param>
           </params>
@@ -139,7 +139,7 @@
         </test-method> <!-- tearDownMethod -->
       </class> <!-- com.firstcry.test.spoofsearchtest -->
       <class name="com.firstcry.test.WishlistToCart">
-        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.WishlistToCart@4b2c5e02]" started-at="2025-10-28T00:09:10 IST" name="setupTest" finished-at="2025-10-28T00:09:10 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.WishlistToCart@3b5fad2d]" started-at="2025-10-28T18:00:40 IST" name="setupTest" finished-at="2025-10-28T18:00:40 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,15 +150,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="removeFromCart()[pri:0, instance:com.firstcry.test.WishlistToCart@4b2c5e02]" started-at="2025-10-28T00:09:10 IST" name="removeFromCart" finished-at="2025-10-28T00:09:26 IST" duration-ms="15572" status="PASS">
+        <test-method signature="removeFromCart()[pri:0, instance:com.firstcry.test.WishlistToCart@3b5fad2d]" started-at="2025-10-28T18:00:40 IST" name="removeFromCart" finished-at="2025-10-28T18:00:52 IST" duration-ms="12414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeFromCart -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.WishlistToCart@4b2c5e02]" started-at="2025-10-28T00:09:26 IST" name="tearDownMethod" finished-at="2025-10-28T00:09:26 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.WishlistToCart@3b5fad2d]" started-at="2025-10-28T18:00:52 IST" name="tearDownMethod" finished-at="2025-10-28T18:00:52 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=removeFromCart status=SUCCESS method=WishlistToCart.removeFromCart()[pri:0, instance:com.firstcry.test.WishlistToCart@4b2c5e02] output={null}]]]>
+                <![CDATA[[TestResult name=removeFromCart status=SUCCESS method=WishlistToCart.removeFromCart()[pri:0, instance:com.firstcry.test.WishlistToCart@3b5fad2d] output={null}]]]>
               </value>
             </param>
           </params>
@@ -166,6 +166,34 @@
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
       </class> <!-- com.firstcry.test.WishlistToCart -->
+      <class name="com.firstcry.test.RemoveShortlist">
+        <test-method signature="removeFromShortlist()[pri:0, instance:com.firstcry.test.RemoveShortlist@5e17553a]" started-at="2025-10-28T18:00:52 IST" name="removeFromShortlist" finished-at="2025-10-28T18:01:07 IST" duration-ms="14587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromShortlist -->
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:com.firstcry.test.RemoveShortlist@5e17553a]" started-at="2025-10-28T18:00:52 IST" name="setupTest" finished-at="2025-10-28T18:00:52 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.firstcry.test.RemoveShortlist.removeFromShortlist()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.firstcry.test.RemoveShortlist@5e17553a]" started-at="2025-10-28T18:01:07 IST" name="tearDownMethod" finished-at="2025-10-28T18:01:07 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeFromShortlist status=SUCCESS method=RemoveShortlist.removeFromShortlist()[pri:0, instance:com.firstcry.test.RemoveShortlist@5e17553a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- com.firstcry.test.RemoveShortlist -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.firstcry.test.spoofsearchtest">
+      <class name="com.firstcry.test.LoginTest">
         <methods>
           <include name="tearDownSuite"/>
-          <include name="testAddingProductToWishlistAndShortlist"/>
           <include name="tearDownMethod"/>
           <include name="setupTest"/>
+          <include name="testLoginWithMobileNumberAndOTP"/>
           <include name="setupSuite"/>
         </methods>
-      </class> <!-- com.firstcry.test.spoofsearchtest -->
+      </class> <!-- com.firstcry.test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

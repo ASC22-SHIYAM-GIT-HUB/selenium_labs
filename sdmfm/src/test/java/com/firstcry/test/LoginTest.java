@@ -1,14 +1,12 @@
 package com.firstcry.test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.firstcry.base.BaseTest;
 import com.firstcry.base.BaseTesting;
 
 import java.time.Duration;
@@ -26,7 +24,7 @@ public class LoginTest extends BaseTesting {
         // Step 2: Wait for the 'Login' button to be visible and clickable using XPath or CSS Selector
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(), 'Login')]")));
-        
+
         // Step 3: Click on the 'Login' button
         loginButton.click();
 
@@ -36,40 +34,33 @@ public class LoginTest extends BaseTesting {
 
         // Step 5: Wait for the 'CONTINUE' button to be clickable and click it
         WebElement continueButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='CONTINUE']")));
-        continueButton.click();  // This is where the "CONTINUE" button is clicked
+        continueButton.click();  // Click on CONTINUE
 
-        // Step 6: Wait for OTP input fields to appear
-        test.info("Waiting for OTP to be entered manually");
-        Thread.sleep(30000);  // Sleep for 5 minutes for manual OTP entry
+        // Step 6: Wait or auto-enter OTP based on environment
+        if (System.getenv("JENKINS_HOME") != null) {
+            test.info("Running in Jenkins environment - auto-entering predefined OTP");
 
-        // Step 7: After the user manually enters the OTP, find and submit it
-        // Predefined OTP
-        String otp = "123456"; // Replace with the OTP you want to enter
+            String otp = "123456"; // predefined OTP for Jenkins
 
-        // Enter OTP digit by digit into the individual fields
-        WebElement otpField0 = driver.findElement(By.id("notp0"));
-        otpField0.sendKeys(String.valueOf(otp.charAt(0)));  // Enter first digit of OTP
+            driver.findElement(By.id("notp0")).sendKeys(String.valueOf(otp.charAt(0)));
+            driver.findElement(By.id("notp1")).sendKeys(String.valueOf(otp.charAt(1)));
+            driver.findElement(By.id("notp2")).sendKeys(String.valueOf(otp.charAt(2)));
+            driver.findElement(By.id("notp3")).sendKeys(String.valueOf(otp.charAt(3)));
+            driver.findElement(By.id("notp4")).sendKeys(String.valueOf(otp.charAt(4)));
+            driver.findElement(By.id("notp5")).sendKeys(String.valueOf(otp.charAt(5)));
 
-        WebElement otpField1 = driver.findElement(By.id("notp1"));
-        otpField1.sendKeys(String.valueOf(otp.charAt(1)));  // Enter second digit of OTP
+            test.pass("OTP auto-filled successfully in Jenkins environment");
+        } else {
+            test.info("Waiting for manual OTP entry (local run)");
+            Thread.sleep(30000); // Wait for manual OTP entry locally
+        }
 
-        WebElement otpField2 = driver.findElement(By.id("notp2"));
-        otpField2.sendKeys(String.valueOf(otp.charAt(2)));  // Enter third digit of OTP
-
-        WebElement otpField3 = driver.findElement(By.id("notp3"));
-        otpField3.sendKeys(String.valueOf(otp.charAt(3)));  // Enter fourth digit of OTP
-
-        WebElement otpField4 = driver.findElement(By.id("notp4"));
-        otpField4.sendKeys(String.valueOf(otp.charAt(4)));  // Enter fifth digit of OTP
-
-        WebElement otpField5 = driver.findElement(By.id("notp5"));
-        otpField5.sendKeys(String.valueOf(otp.charAt(5)));  // Enter sixth digit of OTP
-
-        // Step 8: Wait for the 'Submit' button to be clickable and submit the OTP
-        WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, 'loginSignup_submitOtpBtn_block')]/span[text()='SUBMIT']")));
+        // Step 7: Wait for the 'Submit' button to be clickable and submit the OTP
+        WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[contains(@class, 'loginSignup_submitOtpBtn_block')]/span[text()='SUBMIT']")));
         submitButton.click();
 
-        // Step 9: Verify if login is successful
+        // Step 8: Verify if login is successful
         boolean isLoggedIn = driver.getCurrentUrl().contains("dashboard");
         Assert.assertTrue(isLoggedIn, "Login failed after entering OTP");
 

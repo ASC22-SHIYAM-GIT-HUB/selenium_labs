@@ -25,11 +25,11 @@ public class spoofsearchtest extends BaseTesting {
     @Test
     public void searchbutton() throws InterruptedException {
         // Create ExtentTest for this test method
-        test = extent.createTest("testAddingProductToWishlistAndShortlist");
+        test = extent.createTest("Search Bar Button");
 
-        logStep("Starting test: testAddingProductToWishlistAndShortlist");
+        logStep("Starting test: Search Bar Button");
 
-        //navigateurl("https://www.firstcry.com/");
+        navigateurl("https://www.firstcry.com/");
         logStep("Navigated to FirstCry homepage");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

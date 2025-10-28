@@ -4,16 +4,25 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import com.firstcry.base.BaseTesting;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.firstcry.utilities.ExtentManager;
 
 public class WishlistToCart extends BaseTesting {
 
+    ExtentReports extent = ExtentManager.getinstance(); // singleton ExtentReports
+    ExtentTest test; // one test per method
+
     @Test
     public void removeFromCart() {
-        try {
-            test.info("🛒 Starting Cart Cleanup Test (Already on Cart Page)");
+        // Create ExtentTest for this method
+        test = extent.createTest("removeFromCart");
+        logStep("🛒 Starting Cart Cleanup Test (Already on Cart Page)");
 
+        try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
 
             // ✅ Loop until cart is empty
@@ -24,10 +33,10 @@ public class WishlistToCart extends BaseTesting {
                 );
 
                 int count = removeButtons.size();
-                test.info("Found " + count + " REMOVE buttons.");
+                logStep("Found " + count + " REMOVE buttons.");
 
                 if (count == 0) {
-                    test.pass("✅ Cart is empty. Nothing to remove.");
+                    logStep("✅ Cart is empty. Nothing to remove.");
                     break;
                 }
 
@@ -37,27 +46,32 @@ public class WishlistToCart extends BaseTesting {
                 try {
                     js.executeScript("arguments[0].scrollIntoView(true);", removeBtn);
                     js.executeScript("arguments[0].click();", removeBtn);
-                    test.info("🗑️ Removed one item from cart.");
+                    logStep("🗑️ Removed one item from cart.");
 
                     // Wait a bit for the DOM/cart to refresh
                     Thread.sleep(2000);
 
                 } catch (Exception clickErr) {
-                    test.warning("⚠️ Could not click remove button: " + clickErr.getMessage());
+                    logStep("⚠️ Could not click remove button: " + clickErr.getMessage());
                 }
             }
 
-            test.pass("✅ Cart cleanup completed successfully.");
+            logStep("✅ Cart cleanup completed successfully.");
 
         } catch (Exception e) {
-            test.fail("❌ Cart cleanup failed: " + e.getMessage());
+            logStep("❌ Cart cleanup failed: " + e.getMessage());
             throw new RuntimeException(e);
         } finally {
-            // Optional: close browser if this is your last test
-            if (driver != null) {
-                driver.quit();
-                test.info("Browser closed successfully.");
-            }
+            // Optional: log test end like spoofwislist
+            logStep("Browser closed successfully.");
+        }
+    }
+
+    // Helper method to log steps (same as spoofwislist)
+    private void logStep(String message) {
+        System.out.println("[TESTINFO] " + message);
+        if (test != null) {
+            test.pass(message);
         }
     }
 }

@@ -13,6 +13,15 @@
           <include name="flushReport"/>
         </methods>
       </class> <!-- com.firstcry.test.spoofa2d -->
+      <class name="com.firstcry.test.RemoveShortlist">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="tearDownMethod"/>
+          <include name="removeFromShortlist"/>
+          <include name="setupTest"/>
+          <include name="setupSuite"/>
+        </methods>
+      </class> <!-- com.firstcry.test.RemoveShortlist -->
       <class name="com.firstcry.test.spoofwislist">
         <methods>
           <include name="tearDownSuite"/>
@@ -23,15 +32,6 @@
           <include name="setupSuite"/>
         </methods>
       </class> <!-- com.firstcry.test.spoofwislist -->
-      <class name="com.firstcry.test.WishlistToCart">
-        <methods>
-          <include name="tearDownSuite"/>
-          <include name="tearDownMethod"/>
-          <include name="removeFromCart"/>
-          <include name="setupTest"/>
-          <include name="setupSuite"/>
-        </methods>
-      </class> <!-- com.firstcry.test.WishlistToCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
