@@ -15,32 +15,26 @@ public class spooflogin extends BaseTesting {
 
     @Test
     public void testLoginWithMobileNumberAndOTP() throws InterruptedException {
-        // Log the start of the test
         test.info("Starting Login Test");
 
-        // Step 1: Navigate to the FirstCry login page
         navigateurl("https://www.firstcry.com/");
 
-        // Step 2: Wait for the 'Login' button
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(), 'Login')]")));
 
-        // Step 3: Click on 'Login'
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(), 'Login')]")));
         loginButton.click();
 
-        // Step 4: Enter mobile number
         WebElement mobileNumberField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lemail")));
         mobileNumberField.clear();
         mobileNumberField.sendKeys("9363025780");
 
-        // Step 5: Click on 'CONTINUE'
         WebElement continueButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='CONTINUE']")));
         continueButton.click();
 
-        // Step 6: Handle OTP
+        // Handle OTP input
         if (System.getenv("JENKINS_HOME") != null) {
             test.info("Running in Jenkins environment - auto-entering predefined OTP");
-            String otp = "123456"; // Jenkins predefined OTP
+            String otp = "123456";
 
             for (int i = 0; i < otp.length(); i++) {
                 driver.findElement(By.id("notp" + i)).sendKeys(String.valueOf(otp.charAt(i)));
@@ -49,16 +43,47 @@ public class spooflogin extends BaseTesting {
             test.pass("OTP auto-filled successfully in Jenkins environment");
         } else {
             test.info("Waiting for manual OTP entry (local run)");
-            Thread.sleep(30000); // wait for manual entry
+
+            boolean otpEntered = false;
+            int maxWaitSeconds = 60;
+            int waited = 0;
+
+            while (!otpEntered && waited < maxWaitSeconds) {
+                Thread.sleep(1000);
+                waited++;
+
+                StringBuilder enteredOtp = new StringBuilder();
+                boolean allFilled = true;
+
+                for (int i = 0; i < 6; i++) {
+                    WebElement otpField = driver.findElement(By.id("notp" + i));
+                    String val = otpField.getAttribute("value");
+                    if (val == null || val.isEmpty()) {
+                        allFilled = false;
+                        break;
+                    }
+                    enteredOtp.append(val);
+                }
+
+                if (allFilled) {
+                    otpEntered = true;
+                    test.pass("Manual OTP entered: " + enteredOtp.toString());
+                }
+            }
+
+            if (!otpEntered) {
+                test.fail("Manual OTP was not entered within " + maxWaitSeconds + " seconds");
+                Assert.fail("OTP not entered in time");
+            }
         }
 
-        // Step 7: Click on 'SUBMIT'
         WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//div[contains(@class, 'loginSignup_submitOtpBtn_block')]/span[text()='SUBMIT']")));
         submitButton.click();
 
-        // Step 8: Wait for post-login element (My Account / Profile icon)
-        Thread.sleep(5000); // short buffer after OTP
+        // Wait for login confirmation
+        Thread.sleep(5000);
+
         boolean isLoggedIn = false;
         try {
             WebElement profileIcon = new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -68,7 +93,6 @@ public class spooflogin extends BaseTesting {
             isLoggedIn = driver.getCurrentUrl().contains("firstcry");
         }
 
-        // Step 9: Assert login
         Assert.assertTrue(isLoggedIn, "Login failed after entering OTP");
         test.pass("Login test passed successfully with OTP");
     }
