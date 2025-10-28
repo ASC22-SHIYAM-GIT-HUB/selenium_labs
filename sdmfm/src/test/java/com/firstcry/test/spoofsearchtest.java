@@ -25,22 +25,16 @@ public class spoofsearchtest extends BaseTesting {
     @Test
     public void searchAndNavigateToProduct() {
         // Create ExtentTest for this test method
-<<<<<<< HEAD
         test = extent.createTest("Search Bar Button");
-=======
+
         test = extent.createTest("searchAndNavigateToProduct");
->>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
 
-<<<<<<< HEAD
+
         logStep("Starting test: Search Bar Button");
-=======
-        logStep("Starting test: searchAndNavigateToProduct");
->>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
 
-<<<<<<< HEAD
-=======
+        logStep("Starting test: searchAndNavigateToProduct");
         // Navigate to FirstCry homepage
->>>>>>> branch 'master' of https://github.com/ASC22-SHIYAM-GIT-HUB/selenium_labs.git
+
         navigateurl("https://www.firstcry.com/");
         logStep("Navigated to FirstCry homepage");
 
