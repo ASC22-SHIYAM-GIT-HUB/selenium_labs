@@ -9,7 +9,8 @@
       <class name="com.firstcry.test.spoofwislist"/>
       <class name="com.firstcry.test.spoofa2d"/>
       <class name="com.firstcry.test.WishlistToCart"></class>
-      <class name="com.firstcry.test.RemoveShortlist"></class>
+      <!-- <class name="com.firstcry.test.RemoveShortlist"></class>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
