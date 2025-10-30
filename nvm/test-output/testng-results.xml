@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-30T15:26:30 IST" name="Default suite" finished-at="2025-10-30T15:27:32 IST" duration-ms="62708">
+    <groups>
+    </groups>
+    <test started-at="2025-10-30T15:26:30 IST" name="Default test" finished-at="2025-10-30T15:27:32 IST" duration-ms="62708">
+      <class name="com.firstcryapp.test.Combined_FirstCry_">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:26:30 IST" name="setup" finished-at="2025-10-30T15:26:41 IST" duration-ms="10884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="TC_notification_1()[pri:1, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:26:41 IST" name="TC_notification_1" finished-at="2025-10-30T15:26:42 IST" duration-ms="1602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_notification_1 -->
+        <test-method signature="TC_Login_2()[pri:2, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:26:42 IST" name="TC_Login_2" finished-at="2025-10-30T15:26:45 IST" duration-ms="2803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_2 -->
+        <test-method signature="TC_UserLogin_3()[pri:3, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:26:45 IST" name="TC_UserLogin_3" finished-at="2025-10-30T15:26:55 IST" duration-ms="10277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_UserLogin_3 -->
+        <test-method signature="TC_Search_4()[pri:4, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:26:55 IST" name="TC_Search_4" finished-at="2025-10-30T15:27:13 IST" duration-ms="17145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Search_4 -->
+        <test-method signature="TC_Whislist_5()[pri:5, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:27:13 IST" name="TC_Whislist_5" finished-at="2025-10-30T15:27:30 IST" duration-ms="17142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Whislist_5 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.firstcryapp.test.Combined_FirstCry_@477b4cdf]" started-at="2025-10-30T15:27:30 IST" name="tearDown" finished-at="2025-10-30T15:27:32 IST" duration-ms="2696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.firstcryapp.test.Combined_FirstCry_ -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
